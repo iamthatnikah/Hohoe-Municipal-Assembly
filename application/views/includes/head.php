@@ -12,7 +12,7 @@
 
     
 <!--Linking of Css -->
-<link href="<?php echo base_url() ?>assets/css/bootstrap-grid.min.css" rel="stylesheet">    
+<link href="<?php echo base_url() ?>assets/css/bootstrap-grid.min.css" rel="stylesheet">
 <link href="<?php echo base_url() ?>assets/css/bootstrap.min.css" rel="stylesheet">
 <link href="<?php echo base_url() ?>assets/css/signin.css" rel="stylesheet">
 <link href="<?php echo base_url() ?>assets/css/dashboard.css" rel="stylesheet">
