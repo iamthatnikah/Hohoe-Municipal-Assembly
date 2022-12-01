@@ -2,7 +2,7 @@
 //Main Dashboard
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Dashboard extends CI_Controller {
+class Users extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -25,7 +25,7 @@ class Dashboard extends CI_Controller {
 		
 		$this->load->view('includes/head');
 		$this->load->view('includes/aside');
-		$this->load->view('dashboard');
+		$this->load->view('users');
 		$this->load->view('includes/footer');
 		
 		// $this->load->view('admin/includes/sidebar');
