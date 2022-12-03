@@ -17,35 +17,45 @@
     <section class="content form-control">
       <div class="row">
         <div class="col-md-3 mb-2">
-          <div class="card text-white bg-primary mb-3">
+          <div class="card text-white bg-primary mb-3" style="min-height: 10rem;">
           <div class="card-body">
-            <h5 class="card-title">Primary card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 class="card-title">165</h5>
+            <p class="card-text">Staff</p>
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Land</p>
           </div>
         </div>
         </div>
         <div class="col-md-3 mb-2">
-        <div class="card text-white bg-warning mb-3">
+        <div class="card text-white bg-warning mb-3" style="min-height: 10rem;">
           <div class="card-body">
-            <h5 class="card-title">Secondary card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 class="card-title">142</h5>
+            <p class="card-text">Land</p>
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Land</p>
           </div>
         </div>
       </div>
       <div class="col-md-3 mb-2">
-        <div class="card text-white bg-success mb-3">
+        <div class="card text-white bg-success mb-3" style="min-height: 10rem;">
           <div class="card-body">
             <h5 class="card-title">Success card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Land</p>
           </div>
         </div>
       </div>
       <div class="col-md-3 mb-2">
-        <div class="card text-white bg-danger mb-3">
+        <div class="card text-white bg-danger mb-3" style="min-height: 10rem;">
           <div class="card-body">
             <span class="fa fa-user"></span>
             <h5 class="card-title">Danger card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          <div class="card-footer">
+            <p class="card-text">Land</p>
           </div>
         </div>
       </div>
@@ -53,7 +63,7 @@
 
     <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> -->
 
-    
+
     <div class="row">
         <div class="col-md-5 mb-3">
           <div class="card bg-light mb-3" style="max-height: 20rem;">
