@@ -6,7 +6,7 @@
   <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search">
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="#">Sign out</a>
+      <a class="nav-link px-3" href="<?php echo site_url('#') ?>">Sign out</a>
     </div>
   </div>
 </header>
@@ -17,37 +17,50 @@
       <div class="position-sticky pt-3 sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
+            <a class="nav-link active" aria-current="page" href="<?php echo site_url('dashboard') ?>">
               <span data-feather="home" class="align-text-bottom"></span>
               Dashboard
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="<?php echo site_url('assets') ?>" role="button" aria-haspopup="true" aria-expanded="false">
               <span data-feather="file" class="align-text-bottom"></span>
               Assets
             </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="<?php echo site_url('assets') ?>">Tangible Assets</a>
+              <div role="separator" class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#two">Intangible Assets</a>
+            </div>
+            <!-- End Assets -->
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="shopping-cart" class="align-text-bottom"></span>
-              Users
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="<?php echo site_url('users') ?>" role="button" aria-haspopup="true" aria-expanded="false">
+              <span data-feather="file" class="align-text-bottom"></span>
+              Staff
             </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="<?php echo site_url('users') ?>">Permanent Staff</a>
+              <div role="separator" class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#two">Contract Staff</a>
+            </div>
+            <!-- End Assets -->
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="<?php echo site_url('admin/mails') ?>">
               <span data-feather="users" class="align-text-bottom"></span>
               Database
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="<?php echo site_url('admin/mails') ?>">
               <span data-feather="bar-chart-2" class="align-text-bottom"></span>
               SMS
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="<?php echo site_url('admin/mails') ?>">
               <span data-feather="layers" class="align-text-bottom"></span>
               Integrations
             </a>

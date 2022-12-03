@@ -1,7 +1,7 @@
 
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
   <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">Users</h1>
+    <h1 class="h2">Permanent Staff</h1>
     <div class="btn-toolbar mb-2 mb-md-0">
       <div class="btn-group me-2">
         <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
@@ -14,10 +14,154 @@
     </div>
   </div>
 
-  <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+<!-- Form begining -->
+  <div class="col-sm-12">
+            <p>
+              <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Add Staff</a>          
+            </p>
+            <div class="row">
+              <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample">
+                  <div class="card card-body">
+                    <form action="<?php echo site_url('users/add_user') ?>" method="post">
+                      <div class="form-row">
+                        <!--  -->
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                              <!--  -->
+                            <div class="col-md-12 order-md-1">
+                            <h4 class="mb-3">Billing address</h4>
+                            <form class="needs-validation" novalidate>
+                              <div class="row">
+                                <div class="col-md-6 mb-3">
+                                  <label for="firstName">First name</label>
+                                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                                  <div class="invalid-feedback">
+                                    Valid first name is required.
+                                  </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                  <label for="lastName">Last name</label>
+                                  <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                                  <div class="invalid-feedback">
+                                    Valid last name is required.
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="row">
+                                <div class="col-md-6 mb-3">
+                                  <label for="username">Username</label>
+                                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                                  <div class="invalid-feedback">
+                                    Valid first name is required.
+                                  </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                  <label for="lastName">Email</label>
+                                  <input type="email" class="form-control" id="email" placeholder="you@example.com" value="" required>
+                                  <div class="invalid-feedback">
+                                    Valid last name is required.
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="row">
+                                <div class="col-md-6 mb-3">
+                                  <label for="username">Department</label>
+                                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                                  <div class="invalid-feedback">
+                                    Valid first name is required.
+                                  </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                  <label for="lastName">Email</label>
+                                  <input type="email" class="form-control" id="email" placeholder="you@example.com" value="" required>
+                                  <div class="invalid-feedback">
+                                    Valid last name is required.
+                                  </div>
+                                </div>
+                              </div>
+
+
+                              <div class="row">
+                                <div class="col-md-5 mb-3">
+                                  <label for="country">Country</label>
+                                  <select class="form-control custom-select d-block w-100" id="country" required>
+                                    <option value="">Choose...</option>
+                                    <option>United States</option>
+                                  </select>
+                                  <div class="invalid-feedback">
+                                    Please select a valid country.
+                                  </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                  <label for="state">State</label>
+                                  <select class="form-control custom-select d-block w-100" id="state" required>
+                                    <option value="">Choose...</option>
+                                    <option>California</option>
+                                  </select>
+                                  <div class="invalid-feedback">
+                                    Please provide a valid state.
+                                  </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                  <label for="zip">Zip</label>
+                                  <input type="text" class="form-control" id="zip" placeholder="" required>
+                                  <div class="invalid-feedback">
+                                    Zip code required.
+                                  </div>
+                                </div>
+                              </div>
+
+
+
+                              <div class="row">
+                                <div class="col-md-6 mb-3">
+                                  <label for="username">Username</label>
+                                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                                  <div class="invalid-feedback">
+                                    Valid first name is required.
+                                  </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                  <label for="lastName">Email</label>
+                                  <input type="email" class="form-control" id="email" placeholder="you@example.com" value="" required>
+                                  <div class="invalid-feedback">
+                                    Valid last name is required.
+                                  </div>
+                                </div>
+                              </div>
+                       </div>
+                        <!--  -->
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+                          </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Add</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+<!-- Form End -->
 
   <h2>Section title</h2>
-  <div class="table-responsive">
+  <div class="table-responsive form-control">
     <table class="table table-striped table-sm">
       <thead>
         <tr>
