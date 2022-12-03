@@ -13,7 +13,7 @@
 
 <div class="container-fluid">
   <div class="row">
-    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar ">
       <div class="position-sticky pt-3 sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
@@ -50,7 +50,7 @@
           <li class="nav-item">
             <a class="nav-link" href="<?php echo site_url('admin/mails') ?>">
               <span data-feather="users" class="align-text-bottom"></span>
-              Database
+              Departments
             </a>
           </li>
           <li class="nav-item">
