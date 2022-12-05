@@ -22,39 +22,43 @@
               Dashboard
             </a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="<?php echo site_url('assets') ?>" role="button" aria-haspopup="true" aria-expanded="false">
-              <span data-feather="file" class="align-text-bottom"></span>
-              Assets
+          
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo site_url('assets') ?>">
+              <span data-feather="layers" class="align-text-bottom"></span>
+              Tangible Assets
             </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="<?php echo site_url('assets') ?>">Tangible Assets</a>
-              <div role="separator" class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#two">Intangible Assets</a>
-            </div>
-            <!-- End Assets -->
           </li>
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="<?php echo site_url('users') ?>" role="button" aria-haspopup="true" aria-expanded="false">
-              <span data-feather="file" class="align-text-bottom"></span>
-              Staff
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="<?php echo site_url('users') ?>">Permanent Staff</a>
-              <div role="separator" class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#two">Contract Staff</a>
-            </div>
-            <!-- End Assets -->
-          </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo site_url('admin/mails') ?>">
+            <a class="nav-link" href="<?php echo site_url('intangible-assets') ?>">
+              <span data-feather="layers" class="align-text-bottom"></span>
+              Intangible Assets
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo site_url('users') ?>">
+              <span data-feather="layers" class="align-text-bottom"></span>
+              Permanent Staff
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo site_url('contract-staff') ?>">
+              <span data-feather="layers" class="align-text-bottom"></span>
+              Contract Staff
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo site_url('department') ?>">
               <span data-feather="users" class="align-text-bottom"></span>
               Departments
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo site_url('admin/mails') ?>">
+            <a class="nav-link" href="<?php echo site_url('sms') ?>">
               <span data-feather="bar-chart-2" class="align-text-bottom"></span>
               SMS
             </a>

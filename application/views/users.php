@@ -16,19 +16,19 @@
 
 <!-- Form begining -->
   <div class="col-sm-12">
-            <p>
+            <!-- <p>
               <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Add Staff</a>          
-            </p>
+            </p> -->
             <div class="row">
               <div class="col">
-                <div class="collapse multi-collapse" id="multiCollapseExample">
+                <div class="">
                   <div class="card card-body">
                     <form action="<?php echo site_url('users/add_user') ?>" method="post">
                       <div class="form-row">
                         <!--  -->
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                           <li class="nav-item">
-                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Add Staff Details</a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
@@ -41,17 +41,56 @@
                           <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                               <!--  -->
                             <div class="col-md-12 order-md-1">
-                            <h4 class="mb-3">Billing address</h4>
+                            <h4 class="mb-3">Add Staff</h4>
                             <form class="needs-validation" novalidate>
+
                               <div class="row">
-                                <div class="col-md-6 mb-3">
+                                <div class="col-md-3 mb-2">
+                                  <label for="firstName">Staff ID</label>
+                                  <input type="number" class="form-control" id="firstName" placeholder="" value="" required>
+                                  <div class="invalid-feedback">
+                                    Valid first name is required.
+                                  </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+                                  <label for="middleName">Date Of Birth</label>
+                                  <input type="date" class="form-control" id="middleName" placeholder="" value="" required>
+                                  <div class="invalid-feedback">
+                                    Valid last name is required.
+                                  </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+                                  <label for="lastName">Date Of First Appointment</label>
+                                  <input type="date" class="form-control" id="lastName" placeholder="" value="" required>
+                                  <div class="invalid-feedback">
+                                    Valid last name is required.
+                                  </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+                                  <label for="lastName">Date Of Last Appointment</label>
+                                  <input type="date" class="form-control" id="lastName" placeholder="" value="" required>
+                                  <div class="invalid-feedback">
+                                    Valid last name is required.
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="row">
+                                <div class="col-md-4 mb-2">
                                   <label for="firstName">First name</label>
                                   <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
                                   <div class="invalid-feedback">
                                     Valid first name is required.
                                   </div>
                                 </div>
-                                <div class="col-md-6 mb-3">
+                                <div class="col-md-4 mb-2">
+                                  <label for="middleName">Middle name</label>
+                                  <input type="text" class="form-control" id="middleName" placeholder="" value="" required>
+                                  <div class="invalid-feedback">
+                                    Valid last name is required.
+                                  </div>
+                                </div>
+                                <div class="col-md-4 mb-2">
                                   <label for="lastName">Last name</label>
                                   <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
                                   <div class="invalid-feedback">
@@ -61,16 +100,28 @@
                               </div>
 
                               <div class="row">
-                                <div class="col-md-6 mb-3">
-                                  <label for="username">Username</label>
-                                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                                  <div class="invalid-feedback">
-                                    Valid first name is required.
+                                <div class="col-md-4 mb-2">
+                                  <label for="lastName">Official Email Address</label>
+                                  <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text">@</span>
+                                    </div>
+                                    <input type="email" class="form-control" id="email" placeholder="you@hhma.gov.gh" value="" required>
+                                    <div class="invalid-feedback">
+                                      Valid last name is required.
+                                    </div>
                                   </div>
                                 </div>
-                                <div class="col-md-6 mb-3">
-                                  <label for="lastName">Email</label>
+                                <div class="col-md-4 mb-2">
+                                  <label for="lastName">Personal Email</label>
                                   <input type="email" class="form-control" id="email" placeholder="you@example.com" value="" required>
+                                  <div class="invalid-feedback">
+                                    Valid last name is required.
+                                  </div>
+                                </div>
+                                <div class="col-md-4 mb-2">
+                                  <label for="lastName">Phone No.</label>
+                                  <input type="number" class="form-control" id="email" placeholder="+233-0000-0000" value="" required>
                                   <div class="invalid-feedback">
                                     Valid last name is required.
                                   </div>
