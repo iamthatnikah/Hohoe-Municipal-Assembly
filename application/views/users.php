@@ -100,7 +100,7 @@
                               </div>
 
                               <div class="row">
-                                <div class="col-md-4 mb-2">
+                                <div class="col-md-3 mb-2">
                                   <label for="lastName">Official Email Address</label>
                                   <div class="input-group">
                                     <div class="input-group-prepend">
@@ -112,46 +112,66 @@
                                     </div>
                                   </div>
                                 </div>
-                                <div class="col-md-4 mb-2">
+                                <div class="col-md-3 mb-2">
                                   <label for="lastName">Personal Email</label>
                                   <input type="email" class="form-control" id="email" placeholder="you@example.com" value="" required>
                                   <div class="invalid-feedback">
                                     Valid last name is required.
                                   </div>
                                 </div>
-                                <div class="col-md-4 mb-2">
+                                <div class="col-md-3 mb-2">
                                   <label for="lastName">Phone No.</label>
                                   <input type="number" class="form-control" id="email" placeholder="+233-0000-0000" value="" required>
                                   <div class="invalid-feedback">
                                     Valid last name is required.
                                   </div>
                                 </div>
+                                <div class="col-md-3 mb-2">
+                                  <label for="country">Gender</label>
+                                  <select class="form-control custom-select d-block w-100" id="country" required>
+                                    <option value="">Choose...</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                  </select>
+                                  <div class="invalid-feedback">
+                                    Please select a valid country.
+                                  </div>
+                                </div>
                               </div>
 
                               <div class="row">
-                                <div class="col-md-6 mb-3">
-                                  <label for="username">Department</label>
-                                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                                  <div class="invalid-feedback">
-                                    Valid first name is required.
-                                  </div>
+                                <div class="col-md-4 mb-2">
+                                  <label for="department">Department</label>
+                                  <select class="form-control custom-select d-block w-100" id="department" placeholder="Department" required>
+                                    <option value="">Choose...</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                  </select>
                                 </div>
-                                <div class="col-md-6 mb-3">
-                                  <label for="lastName">Email</label>
+                                <div class="col-md-4 mb-2">
+                                  <label for="lastName">Grade</label>
                                   <input type="email" class="form-control" id="email" placeholder="you@example.com" value="" required>
                                   <div class="invalid-feedback">
                                     Valid last name is required.
                                   </div>
                                 </div>
+                                <div class="col-md-4 mb-2">
+                                  <label for="zip">Socail Security Number</label>
+                                  <input type="number" class="form-control" id="zip" placeholder="Social Security Number" required>
+                                  <div class="invalid-feedback">
+                                    SSN required.
+                                  </div>
+                                </div>
                               </div>
 
 
                               <div class="row">
-                                <div class="col-md-5 mb-3">
-                                  <label for="country">Country</label>
+                                <div class="col-md-4 mb-3">
+                                  <label for="country">Gender</label>
                                   <select class="form-control custom-select d-block w-100" id="country" required>
                                     <option value="">Choose...</option>
-                                    <option>United States</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
                                   </select>
                                   <div class="invalid-feedback">
                                     Please select a valid country.
@@ -167,11 +187,11 @@
                                     Please provide a valid state.
                                   </div>
                                 </div>
-                                <div class="col-md-3 mb-3">
-                                  <label for="zip">Zip</label>
-                                  <input type="text" class="form-control" id="zip" placeholder="" required>
+                                <div class="col-md-4 mb-3">
+                                  <label for="username">Personnel Passport Image</label>
+                                  <input type="upload" class="form-control" id="firstName" placeholder="" value="" required>
                                   <div class="invalid-feedback">
-                                    Zip code required.
+                                    Valid first name is required.
                                   </div>
                                 </div>
                               </div>
@@ -179,20 +199,7 @@
 
 
                               <div class="row">
-                                <div class="col-md-6 mb-3">
-                                  <label for="username">Username</label>
-                                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                                  <div class="invalid-feedback">
-                                    Valid first name is required.
-                                  </div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                  <label for="lastName">Email</label>
-                                  <input type="email" class="form-control" id="email" placeholder="you@example.com" value="" required>
-                                  <div class="invalid-feedback">
-                                    Valid last name is required.
-                                  </div>
-                                </div>
+                                
                               </div>
                        </div>
                         <!--  -->

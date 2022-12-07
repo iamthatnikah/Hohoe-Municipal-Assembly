@@ -19,43 +19,42 @@
         <div class="col-md-3 mb-2">
           <div class="card text-white bg-primary mb-3" style="min-height: 10rem;">
           <div class="card-body">
-            <h5 class="card-title">165</h5>
-            <p class="card-text">Staff</p>
+            <b><h1 class="card-title">165</h1></b>
+            <p class="card-text">Staff</p><i class="fas fa-file"></i>
           </div>
           <div class="card-footer">
-            <p class="card-text">Land</p>
+            <p class="card-text text-center">Staff</p>
           </div>
         </div>
         </div>
         <div class="col-md-3 mb-2">
         <div class="card text-white bg-warning mb-3" style="min-height: 10rem;">
           <div class="card-body">
-            <h5 class="card-title">142</h5>
+            <b><h1 class="card-title">142</h1></b>
             <p class="card-text">Land</p>
           </div>
           <div class="card-footer">
-            <p class="card-text">Land</p>
+            <p class="card-text text-center">Land</p>
           </div>
         </div>
       </div>
       <div class="col-md-3 mb-2">
         <div class="card text-white bg-success mb-3" style="min-height: 10rem;">
           <div class="card-body">
-            <h5 class="card-title">Success card title</h5>
+            <b><h1 class="card-title">15</h1></b>
           </div>
           <div class="card-footer">
-            <p class="card-text">Land</p>
+            <p class="card-text text-center">Land</p>
           </div>
         </div>
       </div>
       <div class="col-md-3 mb-2">
         <div class="card text-white bg-danger mb-3" style="min-height: 10rem;">
           <div class="card-body">
-            <span class="fa fa-user"></span>
-            <h5 class="card-title">Danger card title</h5>
+            <b><h1 class="card-title">18</h1></b>
           </div>
           <div class="card-footer">
-            <p class="card-text">Land</p>
+            <p class="card-text text-center">Land</p>
           </div>
         </div>
       </div>
