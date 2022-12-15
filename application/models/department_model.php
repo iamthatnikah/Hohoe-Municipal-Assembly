@@ -4,45 +4,51 @@
       $this->load->database();
     }
 
-    // Get all Department from db
-    public function get_all_department(){
+    // Get all department from db
+    public function get_all_departments(){
       $this->db->order_by('id', 'DESC');
       $query = $this->db->get('departments');
       return $query->result_array();
     }
 
-    // create Department
-    public function create_department(){
+    // create department
+    public function add_department(){
       $data = array(
-        'name' => $this->input->post('name')
+        'department_name' => $this->input->post('department_name'),
+        'office' => $this->input->post('office'),
+        'inter_exten' => $this->input->post('inter_exten'),
+        'hod' => $this->input->post('hod')
       );
 
-      return $this->db->insert('name', $data);
+      return $this->db->insert('departments', $data);
     }
 
-    // get Department by ID
+    // get department by ID
     public function get_department_id($id = FALSE){
         if($id === FALSE){
-            $query = $this->db->get('name');
+            $query = $this->db->get('departments');
             return $query->result_array();
         }
-      $query = $this->db->get_where('name', array('id' => $id));
+      $query = $this->db->get_where('departments', array('id' => $id));
       return $query->row_array();
     }
 
-    // update Department
+    // update department
     public function update_department(){
       $data = array(
-        'name' => $this->input->post('name'),
+        'department_name' => $this->input->post('department_name'),
+        'office' => $this->input->post('office'),
+        'inter_exten' => $this->input->post('inter_exten'),
+        'hod' => $this->input->post('hod')
       );
       $this->db->where('id', $this->input->post('id'));
-     return $this->db->update('name', $data);
+     return $this->db->update('departments', $data);
     }
 
-    // delete Department
+    // delete department
     public function delete_department($id){
       $this->db->where('id', $id);
-      $this->db->delete('name');
+      $this->db->delete('department');
     }
 
   }

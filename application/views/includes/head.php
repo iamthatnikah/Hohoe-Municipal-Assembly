@@ -1,34 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.104.2">
-    <title>HHMA | Asset Management System</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/dashboard/">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    
+  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-<link href="<?php echo base_url() ?>assets/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-<link href="<?php echo base_url() ?>assets/CustomCss/Dashboard.css" rel="stylesheet">
+  <!-- Plugins CSS Files -->
+  <link href="<?php echo base_url() ?>assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?php echo base_url() ?>assets/plugins/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="<?php echo base_url() ?>assets/plugins/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="<?php echo base_url() ?>assets/plugins/quill/quill.snow.css" rel="stylesheet">
+  <link href="<?php echo base_url() ?>assets/plugins/quill/quill.bubble.css" rel="stylesheet">
+  <link href="<?php echo base_url() ?>assets/plugins/remixicon/remixicon.css" rel="stylesheet">
+  <link href="<?php echo base_url() ?>assets/plugins/simple-datatables/style.css" rel="stylesheet">
 
-    <!-- Favicons -->
-<!-- <link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/5.2/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
-<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
-<meta name="theme-color" content="#712cf9"> -->
+  <!-- Template Main CSS File -->
+  <link href="<?php echo base_url() ?>assets/css/style.css" rel="stylesheet">
 
-    
-    <!-- Custom styles for this template -->
-    <link href="<?php base_url()?>assets/CustomCss/Dashboard.css" rel="stylesheet">
-  </head>
-  <body>
+  <!-- =======================================================
+  * Template Name: NiceAdmin - v2.4.1
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
