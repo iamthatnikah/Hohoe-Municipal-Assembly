@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 15, 2022 at 09:33 AM
+-- Generation Time: Dec 16, 2022 at 04:19 PM
 -- Server version: 5.7.14
 -- PHP Version: 7.0.10
 
@@ -23,14 +23,14 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hhma_laptops`
+-- Table structure for table `hhma_desktops`
 --
 
 CREATE TABLE `hhma_desktops` (
   `id` int(11) NOT NULL,
   `computer_location` varchar(55) NOT NULL,
   `owner` varchar(15) NOT NULL,
-  `department` varchar(30) NOT NULL,
+  `department` varchar(50) NOT NULL,
   `admin_acc_name` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `processor` varchar(100) NOT NULL,
@@ -56,11 +56,18 @@ CREATE TABLE `hhma_desktops` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
+-- Dumping data for table `hhma_desktops`
+--
+
+INSERT INTO `hhma_desktops` (`id`, `computer_location`, `owner`, `department`, `admin_acc_name`, `password`, `processor`, `os_edition`, `system_rating`, `installed_memory`, `processor_speed`, `system_type`, `computer_name`, `workgroup`, `product_id`, `date_purchased`, `update_schedule`, `user_acc`, `system_manufacturer`, `system_model`, `office_version`, `antivirus`, `browsers`, `hdd_capacity`, `monitor_brand`, `monitor_model`) VALUES
+(1, 'HHMA-MEHA', 'Assembly', 'Management Information System ', 'CLTS-HP', 'HYGIEA1409', 'Intel(R) Core(TM)', 'Win7 Pro', '64bit OS', '8 GB', 'i5-4590 CPU @3.30GHz (4.0 CPUS)', '45hdggs', 'CLTS-HP', 'WorkGroup', '1445-4545-1445-26-6554-5564-4546', '2022-11-27', 'Every last day in the month', 'Administrator', 'Intel Corporati', 'Intel', 'MS Office 2016', 'Windows Defender', 'Chrome, Firefox, Edge', '1 TB', 'HP', 'HP');
+
+--
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `hhma_laptops`
+-- Indexes for table `hhma_desktops`
 --
 ALTER TABLE `hhma_desktops`
   ADD PRIMARY KEY (`id`);
@@ -70,10 +77,10 @@ ALTER TABLE `hhma_desktops`
 --
 
 --
--- AUTO_INCREMENT for table `hhma_laptops`
+-- AUTO_INCREMENT for table `hhma_desktops`
 --
 ALTER TABLE `hhma_desktops`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

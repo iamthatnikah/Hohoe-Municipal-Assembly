@@ -25,6 +25,7 @@
   <link href="<?php echo base_url() ?>assets/plugins/quill/quill.bubble.css" rel="stylesheet">
   <link href="<?php echo base_url() ?>assets/plugins/remixicon/remixicon.css" rel="stylesheet">
   <link href="<?php echo base_url() ?>assets/plugins/simple-datatables/style.css" rel="stylesheet">
+  <link href="<?php echo base_url() ?>assets/plugins/fontawesome/all.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="<?php echo base_url() ?>assets/css/style.css" rel="stylesheet">

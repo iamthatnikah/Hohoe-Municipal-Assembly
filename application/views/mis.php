@@ -312,8 +312,8 @@
                 <td><?php echo $all_desktops['os_edition'] ?></td>
                 <td><?php echo $all_desktops['installed_memory'] ?></td>
                 <td><?php echo $all_desktops['user_acc'] ?></td>
-                <td><a href="<?php echo site_url(); ?>mis/edit/<?php echo $all_desktops['id']; ?>" class="btn-warning"><i class="fa fa-edit"></i></a> 
-                  <a href="<?php echo site_url(); ?>mis/delete/<?php echo $all_desktops['id']; ?>" onclick="return confirm('Do you want delete this record')" class="btn-danger"><i class="fa fa-trash"></i></a> 
+                <td><a href="<?php echo site_url(); ?>mis/edit/<?php echo $all_desktops['id']; ?>" class="btn-warning"><i class="fas fa-edit"></i></a> 
+                  <a href="<?php echo site_url(); ?>mis/delete/<?php echo $all_desktops['id']; ?>" onclick="return confirm('Do you want delete this record')" class="btn-danger"><i class="fas fa-trash"></i></a> 
                 </td>
               </tr>
             <?php endforeach; ?>

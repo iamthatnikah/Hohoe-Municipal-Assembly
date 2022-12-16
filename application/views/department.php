@@ -159,7 +159,34 @@
           </div>
         </div>
 
-        
+          <!-- Desktop Table -->
+      <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th scope="col">Department Name</th>
+              <th scope="col">Office</th>
+              <th scope="col">intercom Extension</th>
+              <th scope="col">HOD</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php foreach($departments as $all_departments): ?>
+              <tr>
+                <td><?php echo $all_departments['department_name']?></td>
+                <td><?php echo $all_departments['office'] ?></td>
+                <td><?php echo $all_departments['inter_exten'] ?></td>
+                <td><?php echo $all_departments['hod'] ?></td>
+                <td><a href="<?php echo site_url(); ?>mis/edit/<?php echo $all_departments['id']; ?>" class="btn-warning"><i class="fa fa-edit"></i></a> 
+                  <a href="<?php echo site_url(); ?>mis/delete/<?php echo $all_departments['id']; ?>" onclick="return confirm('Do you want delete this record')" class="btn-danger"><i class="fa fa-trash"></i></a> 
+                </td>
+              </tr>
+            <?php endforeach; ?>
+            <!-- End of table -->
+          </tbody>
+        </table>
+      </div>
 
         
 
