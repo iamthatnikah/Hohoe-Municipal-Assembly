@@ -5,9 +5,9 @@
     }
 
     // Get all dispatch from db
-    public function get_all_dispatch(){
+    public function get_all_assetlogs(){
       $this->db->order_by('id', 'DESC');
-      $query = $this->db->get('dispatch');
+      $query = $this->db->get('mis_asset_logs');
       return $query->result_array();
     }
 

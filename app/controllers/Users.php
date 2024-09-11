@@ -3,22 +3,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Users extends CI_Controller {
 
-	public function index(){$page_data['title'] = 'File user Register';  
+	public function index(){$page_data['title'] = 'Users';  
 
 		// get all filelist table from filelist model
-		$data['all_users'] = $this->user_model->get_all_user();
+		$data['all_users'] = $this->user_model->get_all_users();
 
 		// get all filelist table from filelist model
-		$data['all_departments'] = $this->department_model->get_all_depart();
+		$data['all_departments'] = $this->department_model->get_all_departments();
 
 		// get all filelist table from filelist model
-		$data['all_filelists'] = $this->filelist_model->get_all_filelist();
+		//$data['all_filelists'] = $this->filelist_model->get_all_filelist();
 
-		$this->load->view('admin/includes/head');
-		$this->load->view('admin/includes/navbar');
-		$this->load->view('admin/includes/sidebar', $page_data);
-		$this->load->view('admin/users', $data);
-		$this->load->view('admin/includes/footer');
+		$this->load->view('includes/head');
+		$this->load->view('includes/navbar');
+		$this->load->view('includes/asidebar', $page_data);
+		$this->load->view('users', $data);
+		$this->load->view('includes/footer');
 	}
 
 

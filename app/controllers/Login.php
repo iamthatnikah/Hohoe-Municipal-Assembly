@@ -3,7 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
 
-	public function index(){$page_data['title'] = 'File user Register';  
+	public function index(){
+		$page_data['title'] = 'Assets Management System';  
 
 		// get all filelist table from filelist model
 		$data['all_users'] = $this->login_model->get_all_users();
@@ -14,9 +15,9 @@ class Login extends CI_Controller {
 		// get all filelist table from filelist model
 		//$data['all_filelists'] = $this->filelist_model->get_all_filelists();
 
-		$this->load->view('includes/head');
+		$this->load->view('includes/head', $page_data);
 		$this->load->view('login', $data);
-		$this->load->view('includes/footer');
+		// $this->load->view('includes/footer');
 	}
 
 

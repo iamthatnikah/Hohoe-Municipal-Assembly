@@ -221,7 +221,7 @@
                             
                           </div>
 
-                          <br/>
+                          
                           <button type="submit" class="btn btn-primary">Add Staff</button>
                         </form><!-- Form End -->
                       </div>
@@ -230,36 +230,55 @@
                       
 
                     <!--  -->
-                    <div class="table-responsive">
-                      <table class="table table-striped table-sm">
-                        <thead>
-                          <tr>
-                            <th scope="col">Full Name</th>
-                            <th scope="col">official_email</th>
-                            <th scope="col">department</th>
-                            <th scope="col">tel</th>
-                            <th scope="col">gender</th> 
-                            <th scope="col">Actions</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <?php foreach($all_perm_staff as $perm_staff): ?>
-                            <tr>
-                              <td><?php echo $perm_staff['first_name'] . " " . $perm_staff['middle_name'] . " " . $perm_staff['last_name'] ?></td>
-                              <td><?php echo $perm_staff['official_email'] ?></td>
-                              <td><?php echo $perm_staff['department'] ?></td>
-                              <td><?php echo $perm_staff['tel'] ?></td>
-                              <td><?php echo $perm_staff['gender'] ?></td>
-                              <td>
-                                <a href="<?php echo site_url(); ?>/staff/edit/<?php echo $perm_staff['id']; ?>" class="btn btn-primary btn-sm" title="Edit Desktop"><i class="bi bi-pen"></i></a>
-                                <a href="<?php echo site_url(); ?>/staff/delete/<?php echo $perm_staff['id']; ?>" onclick="return confirm('Do you want delete this record')" class="btn btn-danger btn-sm" title="Remove Desktop"><i class="bi bi-trash"></i></a>
-                              </td>
-                            </tr>
-                          <?php endforeach; ?>
-                          <!-- End of table -->
-                        </tbody>
-                      </table>
-                    </div>
+
+
+        <br/>
+        <div class="table-responsive col-12">
+          <div class="card recent-sales overflow-auto">
+            <div class="card-body">
+              <br/>
+              <table class="table table-borderless table-striped datatable table-sm">
+                <thead>
+                  <tr>
+                  <th scope="col">Staff ID</th>
+                    <th scope="col">Full Name</th>
+                    <th scope="col">Official Email</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">Gender</th> 
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                  <tbody>
+                    <?php foreach($all_perm_staff as $perm_staff): ?>
+                      <tr>
+                      <td><?php echo $perm_staff['staff_id'] ?></td>
+                        <td><?php echo $perm_staff['first_name'] . " " . $perm_staff['middle_name'] . " " . $perm_staff['last_name'] ?></td>
+                        <td><?php echo $perm_staff['official_email'] ?></td>
+                        <td><?php echo $perm_staff['department'] ?></td>
+                        <td><?php echo $perm_staff['gender'] ?></td>
+                        <td>
+                          <a href="<?php echo site_url(); ?>/staff/edit/<?php echo $perm_staff['id']; ?>" class="btn btn-primary btn-sm" title="Edit Desktop"><i class="bi bi-pen"></i></a>
+                          <a href="<?php echo site_url(); ?>/staff/delete/<?php echo $perm_staff['id']; ?>" onclick="return confirm('Do you want delete this record')" class="btn btn-danger btn-sm" title="Remove Desktop"><i class="bi bi-trash"></i></a>
+                        </td>
+                      </tr>
+                    <?php endforeach; ?>
+                    <!-- End of table -->
+                  </tbody>
+              </table>
+
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
                   </div>
                       <!-- End Of Tab First Panel -->
 
@@ -392,40 +411,47 @@
                           <button type="submit" class="btn btn-primary">Add Staff</button>
                         </form><!-- Form End -->
                         <br/>
-                        
-                          <table class="table table-striped table-sm">
-                            <div class="table-responsive">
-                              <thead>
-                                <tr>
-                                  <th scope="col">Full Name</th>
-                                  <th scope="col">Personal Email</th>
-                                  <th scope="col">Grade</th>
-                                  <th scope="col">Date First Appointment</th>
-                                  <th scope="col">department</th>
-                                  <th scope="col">tel</th>
-                                  <th scope="col">gender</th> 
-                                  <th scope="col">Actions</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <?php foreach($all_temp_staff as $temp_staff): ?>
+
+                        <div class="table-responsive col-12">
+                          <div class="card recent-sales overflow-auto">
+                            <div class="card-body">
+                              <br/>
+                              <table class="table table-borderless table-striped datatable table-sm">
+                                <thead>
                                   <tr>
-                                    <td><?php echo $temp_staff['first_name'] . " " . $temp_staff['middle_name'] . " " . $temp_staff['last_name'] ?></td>
-                                    <td><?php echo $temp_staff['personal_email'] ?></td>
-                                    <td><?php echo $temp_staff['grade'] ?></td>
-                                    <td><?php echo $temp_staff['date_first_appointment'] ?></td>
-                                    <td><?php echo $temp_staff['department'] ?></td>
-                                    <td><?php echo $temp_staff['tel'] ?></td>
-                                    <td><?php echo $temp_staff['gender'] ?></td>
-                                    <td><a href="<?php echo site_url(); ?>mis/edit/<?php echo $temp_staff['id']; ?>" class="btn-warning"><i class="fa fa-edit"></i></a> 
-                                      <a href="<?php echo site_url(); ?>mis/delete/<?php echo $temp_staff['id']; ?>" onclick="return confirm('Do you want delete this record')" class="btn-danger"><i class="fa fa-trash"></i></a> 
-                                    </td>
+                                    <th scope="col">Full Name</th>
+                                    <th scope="col">Personal Email</th>
+                                    <th scope="col">Department</th>
+                                    <th scope="col">Mobile</th>
+                                    <th scope="col">Gender</th> 
+                                    <th scope="col">Actions</th>
                                   </tr>
-                                <?php endforeach; ?>
-                                <!-- End of table -->
-                              </tbody>
+                                </thead>
+                                  <tbody>
+                                    <?php foreach($all_temp_staff as $temp_staff): ?>
+                                      <tr>
+                                        <td><?php echo $temp_staff['first_name'] . " " . $temp_staff['middle_name'] . " " . $temp_staff['last_name'] ?></td>
+                                        <td><?php echo $temp_staff['personal_email'] ?></td>
+                                        <td><?php echo $temp_staff['department'] ?></td>
+                                        <td><?php echo $temp_staff['tel'] ?></td>
+                                        <td><?php echo $temp_staff['gender'] ?></td>
+                                        <td>
+                                          <a href="<?php echo site_url(); ?>/staff/edit/<?php echo $temp_staff['id']; ?>" class="btn btn-primary btn-sm" title="Edit Desktop"><i class="bi bi-pen"></i></a>
+                                          <a href="<?php echo site_url(); ?>/staff/delete/<?php echo $temp_staff['id']; ?>" onclick="return confirm('Do you want delete this record')" class="btn btn-danger btn-sm" title="Remove Desktop"><i class="bi bi-trash"></i></a>
+                                        </td>
+                                      </tr>
+                                    <?php endforeach; ?>
+                                    <!-- End of table -->
+                                  </tbody>
+                              </table>
+
                             </div>
-                          </table>
+
+                          </div>
+                        </div>
+                        
+
+
                           
                         </div>
                       </div>

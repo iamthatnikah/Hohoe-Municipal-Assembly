@@ -5,25 +5,25 @@
     }
 
     // Get all user from db
-    public function get_all_user(){
+    public function get_all_users(){
       $this->db->order_by('id', 'DESC');
-      $query = $this->db->get('user');
+      $query = $this->db->get('users');
       return $query->result_array();
     }
 
     // create user
-    public function create_user(){
+    public function create_users($enc_password){
       $data = array(
-        'firstname' => $this->input->post('firstname'),
-        'lastname' => $this->input->post('lastname'),
+        'fullname' => $this->input->post('fullname'),
         'email' => $this->input->post('email'),
         'department' => $this->input->post('department'),
         'role' => $this->input->post('role'),
-        'status' => $this->input->post('status')
+        'status' => 'Active',
+        'password' => $enc_password
         
       );
 
-      return $this->db->insert('user', $data);
+      return $this->db->insert('users', $data);
     }
 
     // get user by ID
@@ -37,7 +37,7 @@
     }
 
     // update user
-    public function update_user(){
+    public function update_user($enc_password){
       $data = array(
         'firstname' => $this->input->post('firstname'),
         'lastname' => $this->input->post('lastname'),
@@ -45,9 +45,20 @@
         'department' => $this->input->post('department'),
         'role' => $this->input->post('role'),
         'status' => $this->input->post('status')
+        
       );
       $this->db->where('id', $this->input->post('id'));
      return $this->db->update('user', $data);
+    }
+
+     // Check email exists
+    public function check_email_exists($email){
+      $query = $this->db->get_where('users', array('email' => $email));
+      if(empty($query->row_array())){
+        return true;
+      } else {
+        return false;
+      }
     }
 
     // delete user

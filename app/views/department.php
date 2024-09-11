@@ -90,36 +90,44 @@
 
 
           <!-- Desktop Table -->
-      <div class="table-responsive">
-        <table class="table table-striped table-sm">
-          <thead>
-            <tr>
-              <th scope="col">Department Name</th>
-              <th scope="col">Office</th>
-              <th scope="col">intercom Extension</th>
-              <th scope="col">HOD</th>
-              <th scope="col">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <?php foreach($departments as $all_departments): ?>
-              <tr>
-                <td><?php echo $all_departments['department_name']?></td>
-                <td><?php echo $all_departments['office'] ?></td>
-                <td><?php echo $all_departments['inter_exten'] ?></td>
-                <td><?php echo $all_departments['hod'] ?></td>
-                <td>
-                  <a href="<?php echo site_url(); ?>/department/edit/<?php echo $all_departments['id']; ?>" class="btn btn-primary btn-sm" title="Edit Department"><i class="bi bi-pen"></i></a>
-                  <a href="<?php echo site_url(); ?>/department/delete/<?php echo $all_departments['id']; ?>" onclick="return confirm('Do you want delete this record')" class="btn btn-danger btn-sm" title="Remove Department"><i class="bi bi-trash"></i></a>
-                </td>
-              </tr>
-            <?php endforeach; ?>
-            <!-- End of table -->
-          </tbody>
-        </table>
-      </div>
 
-        
+
+
+          <div class="table-responsive col-12">
+            <div class="card recent-sales overflow-auto">
+              <div class="card-body">
+                <br/>
+                <table class="table table-borderless table-striped datatable table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col">Department Name</th>
+                      <th scope="col">Office</th>
+                      <th scope="col">intercom Extension</th>
+                      <th scope="col">HOD</th>
+                      <th scope="col">Actions</th>
+                    </tr>
+                  </thead>
+                    <tbody>
+                      <?php foreach($departments as $all_departments): ?>
+                        <tr>
+                          <td><?php echo $all_departments['department_name']?></td>
+                          <td><?php echo $all_departments['office'] ?></td>
+                          <td><?php echo $all_departments['inter_exten'] ?></td>
+                          <td><?php echo $all_departments['hod'] ?></td>
+                          <td>
+                            <a href="<?php echo site_url(); ?>/department/edit/<?php echo $all_departments['id']; ?>" class="btn btn-primary btn-sm" title="Edit Department"><i class="bi bi-pen"></i></a>
+                            <a href="<?php echo site_url(); ?>/department/delete/<?php echo $all_departments['id']; ?>" onclick="return confirm('Do you want delete this record')" class="btn btn-danger btn-sm" title="Remove Department"><i class="bi bi-trash"></i></a>
+                          </td>
+                        </tr>
+                      <?php endforeach; ?>
+                      <!-- End of table -->
+                    </tbody>
+                </table>
+
+              </div>
+
+            </div>
+          </div>
 
       </div>
     </section>
