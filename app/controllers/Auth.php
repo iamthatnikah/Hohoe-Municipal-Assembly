@@ -5,7 +5,7 @@ class Auth extends CI_Controller {
     public function index(){
         $data = array();
         $data['page'] = 'Auth';
-        $this->load->view('admin/index', $data);
+        $this->load->view('login', $data);
     }
 
 
@@ -20,8 +20,10 @@ class Auth extends CI_Controller {
                 foreach($query as $row){
                     $data = array(
                         'id' => $row->id,
-                        'fullname' => $row->fullname,
-                        'email' =>$row->email,
+                        'firstname' => $row->firstname,
+                        'middlename' => $row->middlename,
+                        'lastname' => $row->lastname,
+                        'official_email' =>$row->official_email,
                         'role' =>$row->role,
                         'is_login' => TRUE
                     );

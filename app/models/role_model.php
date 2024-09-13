@@ -1,31 +1,23 @@
 <?php
-  class user_model extends CI_Model{
+  class role_model extends CI_Model{
     public function __construct(){
       $this->load->database();
     }
 
     // Get all user from db
-    public function get_all_users(){
+    public function get_all_roles(){
       $this->db->order_by('id', 'DESC');
-      $query = $this->db->get('users');
+      $query = $this->db->get('roles');
       return $query->result_array();
     }
 
-    // create user
-    public function add_user(){
+    // create Role
+    public function create_role(){
       $data = array(
-        'firstname' => $this->input->post('firstname'),
-        'middlename' => $this->input->post('middlename'),
-        'lastname' => $this->input->post('lastname'),
-        'official_email' => $this->input->post('official_email'),
-        'department' => $this->input->post('department'),
         'role' => $this->input->post('role'),
-        'status' => 'Active',
-        'password' => $this->input->post('password', $enc_password) 
-        
       );
 
-      return $this->db->insert('users', $data);
+      return $this->db->insert('roles', $data);
     }
 
     // get user by ID

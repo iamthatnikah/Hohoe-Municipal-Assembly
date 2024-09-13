@@ -7,7 +7,7 @@ class Login extends CI_Controller {
 		$page_data['title'] = 'Assets Management System';  
 
 		// get all filelist table from filelist model
-		$data['all_users'] = $this->login_model->get_all_users();
+		$data['all_users'] = $this->login_model->validate_user();
 
 		// get all filelist table from filelist model
 		//$data['all_departments'] = $this->department_model->get_all_departs();

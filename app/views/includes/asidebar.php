@@ -167,8 +167,8 @@
             </a>
           </li>
           <li>
-            <a href="tables-data.html">
-              <i class="bi bi-circle"></i><span>Data Tables</span>
+            <a href="<?php echo base_url() ?>roles">
+              <i class="bi bi-circle"></i><span>Add Role</span>
             </a>
           </li>
         </ul>
@@ -191,9 +191,9 @@
       </li><!-- End Contact Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-login.html">
-          <i class="bi bi-box-arrow-in-right"></i>
-          <span>Login</span>
+        <a class="nav-link collapsed" href="<?php echo base_url() ?>auth">
+          <i class="bi bi-box-arrow-out-right"></i>
+          <span>Logout</span>
         </a>
       </li><!-- End Login Page Nav -->
 

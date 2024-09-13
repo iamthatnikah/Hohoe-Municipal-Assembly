@@ -1,12 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Users extends CI_Controller {
+class Roles extends CI_Controller {
 
-	public function index(){$page_data['title'] = 'Users';  
-
-		// get all filelist table from filelist model
-		$data['all_users'] = $this->user_model->get_all_users();
+	public function index(){$page_data['title'] = 'Roles';  
 
 		// get all filelist table from filelist model
 		$data['all_roles'] = $this->role_model->get_all_roles();
@@ -20,35 +17,28 @@ class Users extends CI_Controller {
 		$this->load->view('includes/head');
 		$this->load->view('includes/navbar');
 		$this->load->view('includes/asidebar', $page_data);
-		$this->load->view('users', $data);
+		$this->load->view('roles', $data);
 		$this->load->view('includes/footer');
 	}
 
 
-	public function add_user(){
+	public function add_role(){
 		// CI form validation 
-		$this->form_validation->set_rules('firstname', 'First Name', 'required');
-		$this->form_validation->set_rules('middlename', 'Middle Name', 'required');
-		$this->form_validation->set_rules('lastname', 'Last Name', 'required');
-		$this->form_validation->set_rules('official_email', 'Email Address', 'required');
-		$this->form_validation->set_rules('department', 'Department', 'required');
-		$this->form_validation->set_rules('password', 'password', 'required');
 		$this->form_validation->set_rules('role', 'Role', 'required');
-		// $this->form_validation->set_rules('status', 'Status', 'required');
 
 		// check pass validation
 		if($this->form_validation->run() == FALSE){
 			$this->index();
 		}else{
 			// pass values to user_model  
-			$returnInsert = $this->user_model->add_user();
+			$returnInsert = $this->role_model->create_role();
 
 			if($returnInsert){
-				$this->session->set_flashdata('success', 'User Added Successfully');
-				 redirect('users');
+				$this->session->set_flashdata('success', 'Role Added Successfully');
+				 redirect('roles');
 			}else{
 				$this->session->set_flashdata('error', 'Something went wrong: try again');
-				 redirect('users');
+				 redirect('roles');
 			}
 		}
 		

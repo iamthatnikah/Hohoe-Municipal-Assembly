@@ -1,15 +1,79 @@
 <?php
-  class login_model extends CI_Model{
-    public function __construct(){
-      $this->load->database();
+class Login_model extends CI_Model {
+
+    public function edit_option_md5($action, $id, $table){
+        $this->db->where('md5(id)',$id);
+        $this->db->update($table,$action);
+        return;
     }
 
-    // Get all mail from db
-    public function get_all_users(){
-      $this->db->order_by('registed_date', 'DESC');
-      $query = $this->db->get('users');
-      return $query->result_array();
+    //-- check post email
+    public function check_email($email){
+        $this->db->select('*');
+        $this->db->from('users');
+        $this->db->where('official_email', $email); 
+        $this->db->limit(1);
+        $query = $this->db->get();
+        if($query->num_rows() == 1) {                 
+            return $query->result();
+        }else{
+            return false;
+        }
     }
 
 
-  }
+    // check valid user by id
+    public function validate_id($id){
+        $this->db->select('*');
+        $this->db->from('users');
+        $this->db->where('md5(id)', $id); 
+        $this->db->limit(1);
+        $query = $this->db->get();
+        if($query -> num_rows() == 1){                 
+            return $query->result();
+        }
+        else{
+            return false;
+        }
+    }
+
+
+
+    //-- check valid user
+    function validate_user(){            
+        
+        $this->db->select('*');
+        $this->db->from('users');
+        $this->db->where('official_email', $this->input->post('official_email')); 
+        $this->db->where('password', $this->input->post('password')); // md5()
+        $this->db->limit(1);
+        $query = $this->db->get();   
+        
+        if($query->num_rows() == 1){                 
+           return $query->result();
+        }
+        else{
+            return false;
+        }
+    }
+
+
+    // Login mdel for frontend users
+    public function login_user($email, $password){
+            // Validate
+            $this->db->where('official_email', $email);
+            $this->db->where('password', $password);
+            $this->db->where('status', 1);
+
+            $result = $this->db->get('users');
+
+            if($result->num_rows() == 1){
+                return $result->row(0);
+            } else {
+                return false;
+            }
+        }
+
+
+
+}

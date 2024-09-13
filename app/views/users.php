@@ -1,7 +1,7 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Dashboard</h1>
+      <h1><?php echo $title ?></h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="<?php echo base_url() ?>dashboard">Home</a></li>
@@ -11,11 +11,6 @@
     </div><!-- End Page Title -->
     <section class="content-header">
       <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1><?php echo $title ?></h1>
-          </div>
-        </div>
         <div class="row">
           <div class="col-md-12">
               <?php if($this->session->flashdata('error')): ?>
@@ -51,61 +46,77 @@
       <div class="card recent-sales overflow-auto">
         <div class="card-body">
 </br>
-        <form action="" method="post">
+        <form action="<?php echo site_url('users/add_user') ?>" method="POST">
         <div class="row">
-            <div class="col-md-4 mb-3">
-              <label for="admin_acc_name">First Name</label>
-              <input type="text" class="form-control" id="admin_acc_name" placeholder="First Name" name="admin_acc_name" value="" required>
+            <div class="col-md-3 mb-3">
+              <label for="firstname">First Name</label>
+              <input type="text" class="form-control" id="firstname" placeholder="First Name" name="firstname" value="" required>
               <div class="invalid-feedback">
                 Valid First Name is required.
               </div>
             </div>
-            <div class="col-md-4 mb-3">
-              <label for="password">Last Name</label>
-              <input type="text" class="form-control" id="password" placeholder="Last Name" name="password" value="" required>
+            <div class="col-md-3 mb-3">
+              <label for="middlename">Middle Name</label>
+              <input type="text" class="form-control" id="firstname" placeholder="Middle Name" name="middlename" value="" required>
+              <div class="invalid-feedback">
+                Valid First Name is required.
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="lastname">Last Name</label>
+              <input type="text" class="form-control" id="lastname" placeholder="Last Name" name="lastname" value="" required>
               <div class="invalid-feedback">
                 Valid Last Name is required.
               </div>
             </div>
-            <div class="col-md-4 mb-3">
-              <label for="processor">Official Email</label>
-              <input type="email" class="form-control" id="processor" placeholder="Official Email" name="processor" value="" required>
-              <div class="invalid-feedback">
-                Valid last name is required.
-              </div>
-            </div>
-          </div>
-          <div class="row">
             <div class="col-md-3 mb-2">
-              <label for="os_edition">Department</label>
-              <select type="text" class="form-control" id="os_edition" placeholder="Department" name="os_edition" value="" required>
-                <option><?php foreach ($all_departments as $all_department): ?>Choose...</option>
+              <label for="department">Department</label>
+              <select type="text" class="form-control" id="department" placeholder="Department" name="department" value="" required>
+                <option>Choose...</option>
+                  <?php foreach ($all_departments as $all_department): ?>
                     <option value="<?php echo $all_department['department_name'] .' | '. $all_department['office']?>"><?php echo $all_department['department_name'] .' | '. $all_department['office']?></option>
                   <?php endforeach; ?>
               </select>
               <div class="invalid-feedback">
-                Please select a valid country.
+                Please select a valid Department.
               </div>
             </div>
-            <div class="col-md-3 mb-2">
-              <label for="system_rating">Role</label>
+          </div>
+          <div class="row">
+          <div class="col-md-5 mb-3">
+              <label for="official_email">Official Email Address</label>
               <div class="input-group">
-                <input type="text" class="form-control" id="system_rating" placeholder="Role" name="system_rating" value="" required>
+                <div class="input-group-prepend">
+                  <span class="input-group-text">@</span>
+                </div>
+                <input type="email" class="form-control" id="official_email" placeholder="name@hhma.gov.gh" name="official_email" value="" required>
                 <div class="invalid-feedback">
                   Valid last name is required.
                 </div>
               </div>
             </div>
             <div class="col-md-3 mb-2">
+              <label for="role">Role</label>
+              <select type="text" class="form-control" id="role" placeholder="Role" name="role" value="" required>
+                <option>Choose...</option>
+                  <?php foreach ($all_roles as $roles): ?>
+                    <option value="<?php echo $roles['role'] ?>"><?php echo $roles['role'] ?></option>
+                  <?php endforeach; ?>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid Department.
+              </div>
+            </div>
+            <div class="col-md-4 mb-2">
               <label for="installed_memory">Password</label>
               <div class="input-group">
-                <input type="password" class="form-control" id="installed_memory" name="installed_memory" placeholder="Password" value="" required>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" value="" required>
                 <div class="invalid-feedback">
                   Valid last name is required.
                 </div>
               </div>
             </div>
-            <div class="col-md-3 mb-2">
+            <!-- <div class="col-md-3 mb-2">
               <label for="processor_speed">Confirm Password</label>
               <div class="input-group">
                 <input type="password" class="form-control" id="processor" placeholder="Confirm Password" name="processor_speed" value="" required>
@@ -113,7 +124,7 @@
                   Valid last name is required.
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="col-12">
             <button class="btn btn-primary" type="submit">Add User</button>
@@ -163,8 +174,8 @@
                     <tbody>
                     <?php foreach($all_users as $all_user): ?>
                       <tr>
-                        <td><?php echo $all_user['firstname'] . ' ' . $all_user['lastname'] ?></td>
-                        <td><?php echo $all_user['email'] ?></td>
+                        <td><?php echo $all_user['firstname'] . ' ' . $all_user['middlename'] . ' ' . $all_user['lastname']?></td>
+                        <td><?php echo $all_user['official_email'] ?></td>
                         <td><?php echo $all_user['department'] ?></td>
                         <td><?php echo $all_user['role'] ?></td>
                         <td><?php echo $all_user['status'] ?></td>

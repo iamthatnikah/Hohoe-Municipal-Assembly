@@ -1,4 +1,3 @@
-
   <main>
     <div class="container">
 
@@ -23,7 +22,7 @@
                     <p class="text-center small">Enter your username & password to login</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" novalidate>
+                  <form class="row g-3 needs-validation" action="<?php echo site_url('auth/log') ?>" method="POST">
 
                     <div class="col-12">
                       <label for="yourUsername" class="form-label">Username</label>
@@ -46,6 +45,8 @@
                         <label class="form-check-label" for="rememberMe">Remember me</label>
                       </div>
                     </div>
+                    <!-- CSRF token -->
+                    <input type="hidden" name="<?=$this->security->get_csrf_token_name();?>" value="<?=$this->security->get_csrf_hash();?>" />
                     <div class="col-12">
                       <button class="btn btn-primary w-100" type="submit">Login</button>
                     </div>
