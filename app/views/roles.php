@@ -43,7 +43,8 @@
     </section>
 
     <section class="section dashboard">
-      <div class="card recent-sales overflow-auto col-md-6 mb-6">
+      <div class="row">
+      <div class="card recent-sales overflow-auto col-xl-4">
         <div class="card-body">
         </br>
         <form action="<?php echo site_url('roles/add_role') ?>" method="POST">
@@ -69,9 +70,9 @@
 
 
 
-      <div class="row">
+      
         <!-- Left side columns -->
-        <div class="col-lg-12">
+        <div class="col-xl-8">
           <div class="row">
             <!-- Recent Sales -->
             <div class="col-12">

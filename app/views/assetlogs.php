@@ -64,8 +64,8 @@
     <form class="needs-validation" action="<?php echo site_url('mis/add_desktop') ?>" method="POST" novalidate>
       <div class="row">
         <div class="col-md-4 mb-2">
-          <label for="computer_location">Computer Location</label>
-          <input type="text" class="form-control" id="computer_location" name="computer_location" placeholder="HHMA-[Department]" value="" required>
+          <label for="computer_location">Device Type</label>
+          <input type="text" class="form-control" id="computer_location" name="computer_location" placeholder="Laptop / Desktop" value="" required>
           <div class="invalid-feedback">
             Valid first name is required.
           </div>
@@ -73,6 +73,7 @@
         <div class="col-md-4 mb-2">
           <label for="owner">Owner</label>
           <select type="text" class="form-control" id="owner" placeholder="Owner" name="owner" value="" required>
+            <option>Choose...</option>
             <option>Assembly</option>
             <option>Individual</option>
           </select>
@@ -85,7 +86,7 @@
           <select class="form-control custom-select d-block w-100" id="department" name="department" required>
             <option value="">Choose...</option>
             <!-- <option value="<?php foreach ($all_departments as $all_department): ?>"></option> -->
-              <option value="<?php echo $all_department['department_name'] .' | '. $all_department['office']?>"><?php echo $all_department['department_name'] .' | '. $all_department['office']?></option>
+              <option value="<?php echo $all_department['department_name']?>"><?php echo $all_department['department_name']?></option>
             <?php endforeach; ?>
           </select>
           </div>
@@ -94,52 +95,34 @@
     </div>
 
       <div class="row">
-        <div class="col-md-5 mb-3">
-          <label for="admin_acc_name">Administrator Account Name</label>
-          <input type="text" class="form-control" id="admin_acc_name" placeholder="Administrator" name="admin_acc_name" value="" required>
+        <div class="col-md-4 mb-3">
+          <label for="admin_acc_name">Embosed ID</label>
+          <input type="text" class="form-control" id="admin_acc_name" placeholder="HHMA/LPT/MPCU" name="admin_acc_name" value="" required>
           <div class="invalid-feedback">
             Valid first name is required.
           </div>
         </div>
-        <div class="col-md-5 mb-3">
-          <label for="password">Password</label>
-          <input type="text" class="form-control" id="password" placeholder="Password" name="password" value="" required>
+        <div class="col-md-4 mb-3">
+          <label for="password">Device User</label>
+          <input type="text" class="form-control" id="password" placeholder="Name of Superior / Subornidate" name="password" value="" required>
           <div class="invalid-feedback">
             Valid first name is required.
           </div>
         </div>
-        <div class="col-md-2 mb-3">
-          <label for="processor">Processor</label>
-          <input type="text" class="form-control" id="processor" placeholder="Intel(R) Core(TM)" name="processor" value="" required>
+        <div class="col-md-4 mb-3">
+          <label for="processor">Officer Returning</label>
+          <input type="text" class="form-control" id="processor" placeholder="Name of Officer Logging" name="processor" value="" required>
           <div class="invalid-feedback">
             Valid last name is required.
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4 mb-2">
-          <label for="date_purchased">Date Purchased</label>
-          <input type="date" class="form-control" id="date_purchased" name="date_purchased" value="" required>
+        <div class="col-md-12 mb-12">
+          <label for="date_purchased">Device Issue</label>
+          <textarea class="form-control" name="date_purchased" id="date_purchased" cols="30" rows="10" required></textarea>
           <div class="invalid-feedback">
             Valid first name is required.
-          </div>
-        </div>
-        <div class="col-md-4 mb-2">
-          <label for="update_schedule">Update Schedule</label>
-          <input type="text" class="form-control" id="update_schedule" name="update_schedule" placeholder="Update Schedule" value="" required>
-          <div class="invalid-feedback">
-            Valid first name is required.
-          </div>
-        </div>
-        <div class="col-md-4 mb-2">
-          <label for="user_acc">User Account</label>
-          <select class="form-control custom-select d-block w-100" name="user_acc" id="user_acc" required>
-            <option value="">Choose...</option>
-            <option>Administrator</option>
-            <option>Standard</option>
-          </select>
-          <div class="invalid-feedback">
-            Valid last name is required.
           </div>
         </div>
       </div>

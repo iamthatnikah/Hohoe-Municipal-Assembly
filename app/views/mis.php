@@ -4,8 +4,8 @@
       <h1><?php echo $title ?></h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">M.I.S</li>
+          <li class="breadcrumb-item"><a href="<?php echo base_url() ?>dashboard">Home</a></li>
+          <li class="breadcrumb-item active"><?php echo $title ?></li>
         </ol>
       </nav>
       <div class="row">
@@ -85,7 +85,7 @@
               <select class="form-control custom-select d-block w-100" id="department" name="department" required>
                 <option value="">Choose...</option>
                 <!-- <option value="<?php foreach ($all_departments as $all_department): ?>"></option> -->
-                  <option value="<?php echo $all_department['department_name'] .' | '. $all_department['office']?>"><?php echo $all_department['department_name'] .' | '. $all_department['office']?></option>
+                  <option value="<?php echo $all_department['department_name'] ?>"><?php echo $all_department['department_name'] ?></option>
                 <?php endforeach; ?>
               </select>
               </div>

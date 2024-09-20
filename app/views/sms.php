@@ -64,7 +64,7 @@
             </div>
             <div class="">
               <label for="hod">Body</label>
-              <textarea col='1000' row='1000' type="text" class="form-control" id="hod" placeholder="Body" name="hod" value="" required></textarea>
+              <textarea class="form-control" name="hod" id="hod" cols="30" rows="10" placeholder="Body" required></textarea>
               <div class="invalid-feedback">
                 Valid first name is required.
               </div>

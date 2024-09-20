@@ -1,18 +1,18 @@
 <?php
-  class mail_model extends CI_Model{
+  class memo_model extends CI_Model{
     public function __construct(){
       $this->load->database();
     }
 
     // Get all mail from db
-    public function get_all_mail(){
+    public function get_all_memo(){
       $this->db->order_by('added_at', 'DESC');
-      $query = $this->db->get('mails');
+      $query = $this->db->get('memos');
       return $query->result_array();
     }
 
     // create mail
-    public function create_mail(){
+    public function create_memo(){
       $data = array(
         'dol' => $this->input->post('dol'),
         'date_received' => $this->input->post('date_received'),
@@ -23,16 +23,16 @@
       );
       $this->db->set('added_at', 'NOW()', FALSE);
 
-      return $this->db->insert('mails', $data);
+      return $this->db->insert('memos', $data);
     }
 
-    // get mail by ID
-    public function get_mail_id($id = FALSE){
+    // get memo by ID
+    public function memo($id = FALSE){
         if($id === FALSE){
             $query = $this->db->get('mails');
             return $query->result_array();
         }
-      $query = $this->db->get_where('mails', array('id' => $id));
+      $query = $this->db->get_where('memos', array('id' => $id));
       return $query->row_array();
     }
 

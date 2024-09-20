@@ -1,88 +1,34 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class mails extends CI_Controller {
+class Memo extends CI_Controller {
 
 	public function index(){
 
-		$page_data['title'] = 'Incomimg Correspondence Register';  
-
-		// get all filelist table from filelist model
-		$data['all_filelists'] = $this->filelist_model->get_all_filelist();
+		$page_data['title'] = 'Memo Managements';
 
 		// get all department table from department model
-		$data['all_departments'] = $this->department_model->get_all_depart();
+		$data['memos'] = $this->memo_model->get_all_memo();
+
+		// // get all filelist table from filelist model
+		// $data['all_filelists'] = $this->filelist_model->get_all_filelist();
 
 		// get all department table from department model
-		$data['all_mails'] = $this->mail_model->get_all_mail();
+		$data['departments'] = $this->department_model->get_all_departments();
 
-		$this->load->view('admin/includes/head');
-		$this->load->view('admin/includes/navbar');
-		$this->load->view('admin/includes/sidebar', $page_data);
-		$this->load->view('admin/mails', $data);
-		$this->load->view('admin/includes/footer');
+
+		$this->load->view('includes/head');
+		$this->load->view('includes/navbar');
+		$this->load->view('includes/asidebar', $page_data);
+		$this->load->view('memo', $data);
+		$this->load->view('includes/footer');
 	}
-
-
-	public function add_mail(){
-		// CI form validation 
-		$this->form_validation->set_rules('dol', 'Date of Letter', 'required');
-		$this->form_validation->set_rules('date_received', 'Date Received', 'required');
-		$this->form_validation->set_rules('received', 'Received', 'required');
-		$this->form_validation->set_rules('subject', 'Subject', 'required');
-		$this->form_validation->set_rules('reg_no', 'Registry Number', 'required');
-
-		// check pass validation
-		if($this->form_validation->run() == FALSE){
-			$this->index();
-		}else{
-			// pass values to mail_model  
-			$returnInsert = $this->mail_model->create_mail();
-
-			if($returnInsert){
-				$this->session->set_flashdata('success', 'File Added Successfully');
-				 redirect('admin/mails');
-			}else{
-				$this->session->set_flashdata('error', 'Something went wrong: try again');
-				 redirect('admin/mails');
-			}
-		}
-		
-	}
-
-	// load edit mails page
-	public function edit($id){
-
-		// insert page title
-		$page_data['title'] = 'Edit mail';
-
-		// get all filelist table from filelist model
-		$data['all_filelists'] = $this->filelist_model->get_all_filelist();
-
-		// get all department table from department model
-		$data['all_departments'] = $this->department_model->get_all_depart();
-
-		// get individual id from mails model
-		$data['mails'] = $this->mail_model->get_mail_id($id);
-
-			if(empty($data['mails'])){
-			show_404();
-		}
-
-		// load page template
-		$this->load->view('admin/includes/head');
-		$this->load->view('admin/includes/navbar');
-		$this->load->view('admin/includes/sidebar', $page_data);
-		$this->load->view('admin/edit_mails', $data);
-		$this->load->view('admin/includes/footer');
-	}
-
 
 	// starting update mails function
-	public function update($id){
+	public function add_memo($id){
 
 		// insert page title
-		$page_data['title'] = 'Edit mail';
+		$page_data['title'] = 'Add Memo';
 
 		// get individual id from mails model
 		$data['mails'] = $this->mail_model->get_mail_id($id);
@@ -95,8 +41,7 @@ class mails extends CI_Controller {
 		$this->form_validation->set_rules('subject', 'Subject', 'required');
 		$this->form_validation->set_rules('office', 'Office', 'required');
 		$this->form_validation->set_rules('file_ref', 'File Ref No', 'required');
-		$this->form_validation->set_rules('folio', 'Folio', 'required');
-		$this->form_validation->set_rules('reg_no', 'Reg No', 'required');
+
 
 		// pass form validation?
 		if($this->form_validation->run() === FALSE){
@@ -139,6 +84,36 @@ class mails extends CI_Controller {
 			}
 		}
 	}
+
+	// load edit mails page
+	public function edit($id){
+
+		// insert page title
+		$page_data['title'] = 'Edit mail';
+
+		// get all filelist table from filelist model
+		$data['all_filelists'] = $this->filelist_model->get_all_filelist();
+
+		// get all department table from department model
+		$data['all_departments'] = $this->department_model->get_all_depart();
+
+		// get individual id from mails model
+		$data['mails'] = $this->mail_model->get_mail_id($id);
+
+			if(empty($data['mails'])){
+			show_404();
+		}
+
+		// load page template
+		$this->load->view('admin/includes/head');
+		$this->load->view('admin/includes/navbar');
+		$this->load->view('admin/includes/sidebar', $page_data);
+		$this->load->view('admin/edit_mails', $data);
+		$this->load->view('admin/includes/footer');
+	}
+
+
+	
 
 
 	// call update file remove function
