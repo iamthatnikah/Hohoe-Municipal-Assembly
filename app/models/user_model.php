@@ -20,9 +20,8 @@
         'official_email' => $this->input->post('official_email'),
         'department' => $this->input->post('department'),
         'role' => $this->input->post('role'),
-        'status' => 'Active',
-        'password' => $this->input->post('password', $enc_password) 
-        
+        'status' => 'Inactive',
+        'password' => $this->input->post('password',$enc_password) 
       );
 
       return $this->db->insert('users', $data);

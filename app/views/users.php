@@ -74,7 +74,7 @@
               <select type="text" class="form-control" id="department" placeholder="Department" name="department" value="" required>
                 <option>Choose...</option>
                   <?php foreach ($all_departments as $all_department): ?>
-                    <option value="<?php echo $all_department['department_name'] .' | '. $all_department['office']?>"><?php echo $all_department['department_name'] .' | '. $all_department['office']?></option>
+                    <option value="<?php echo $all_department['department_name']?>"><?php echo $all_department['department_name']?></option>
                   <?php endforeach; ?>
               </select>
               <div class="invalid-feedback">
@@ -83,7 +83,7 @@
             </div>
           </div>
           <div class="row">
-          <div class="col-md-5 mb-3">
+          <div class="col-md-4 mb-3">
               <label for="official_email">Official Email Address</label>
               <div class="input-group">
                 <div class="input-group-prepend">
@@ -95,7 +95,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3 mb-2">
+            <div class="col-md-2 mb-2">
               <label for="role">Role</label>
               <select type="text" class="form-control" id="role" placeholder="Role" name="role" value="" required>
                 <option>Choose...</option>
@@ -107,7 +107,7 @@
                 Please select a valid Department.
               </div>
             </div>
-            <div class="col-md-4 mb-2">
+            <div class="col-md-3 mb-2">
               <label for="installed_memory">Password</label>
               <div class="input-group">
                 <input type="password" class="form-control" id="password" name="password" placeholder="Password" value="" required>
@@ -116,15 +116,15 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="col-md-3 mb-2">
-              <label for="processor_speed">Confirm Password</label>
+            <div class="col-md-3 mb-2">
+              <label for="passwordConf">Confirm Password</label>
               <div class="input-group">
-                <input type="password" class="form-control" id="processor" placeholder="Confirm Password" name="processor_speed" value="" required>
+                <input type="password" class="form-control" id="passwordConf" placeholder="Confirm Password" name="passwordConf" value="" required>
                 <div class="invalid-feedback">
                   Valid last name is required.
                 </div>
               </div>
-            </div> -->
+            </div>
           </div>
           <div class="col-12">
             <button class="btn btn-primary" type="submit">Add User</button>

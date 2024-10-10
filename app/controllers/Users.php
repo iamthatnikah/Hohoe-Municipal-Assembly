@@ -32,7 +32,8 @@ class Users extends CI_Controller {
 		$this->form_validation->set_rules('lastname', 'Last Name', 'required');
 		$this->form_validation->set_rules('official_email', 'Email Address', 'required');
 		$this->form_validation->set_rules('department', 'Department', 'required');
-		$this->form_validation->set_rules('password', 'password', 'required');
+		$this->form_validation->set_rules('password', 'password','required');
+		// $this->form_validation->set_rules('passwordConf', 'passwordConf', 'required | min_lenght[5] | matches[password]');
 		$this->form_validation->set_rules('role', 'Role', 'required');
 		// $this->form_validation->set_rules('status', 'Status', 'required');
 
@@ -74,11 +75,11 @@ class Users extends CI_Controller {
 		}
 
 		// load page template
-		$this->load->view('admin/includes/head');
-		$this->load->view('admin/includes/navbar');
-		$this->load->view('admin/includes/sidebar', $page_data);
-		$this->load->view('admin/edit_user', $data);
-		$this->load->view('admin/includes/footer');
+		$this->load->view('includes/head');
+		$this->load->view('includes/navbar');
+		$this->load->view('includes/asidebar', $page_data);
+		$this->load->view('edit_user', $data);
+		$this->load->view('includes/footer');
 	}
 
 
@@ -109,10 +110,10 @@ class Users extends CI_Controller {
 			// pass update?
 			if($returnUpdate){
 				$this->session->set_flashdata('success', 'Update Successfully');
-				redirect('admin/users/edit/' .$id);
+				redirect('users/edit/' .$id);
 			}else{
 				$this->session->set_flashdata('error', 'Something went wrong. Please try again');
-				redirect('admin/users/edit/' .$id);
+				redirect('users/edit/' .$id);
 			}
 		}
 	}
@@ -125,7 +126,7 @@ class Users extends CI_Controller {
 
 		// set flash message
 		$this->session->set_flashdata('success', "User Deleted");
-		redirect('admin/user');
+		redirect('users');
 		
 	}
 }

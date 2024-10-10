@@ -22,7 +22,7 @@
                     <p class="text-center small">Enter your username & password to login</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" action="<?php echo site_url('auth/log') ?>" method="POST">
+                  <form class="row g-3 needs-validation" action="<?php echo site_url('login/login') ?>" method="POST">
 
                     <div class="col-12">
                       <label for="yourUsername" class="form-label">Username</label>

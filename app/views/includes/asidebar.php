@@ -86,7 +86,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#sms-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-mail"></i><span>Circular Broadcasting </span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-envelope"></i><span>Circular Broadcasting </span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="sms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
@@ -184,9 +184,9 @@
       </li><!-- End Profile Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-contact.html">
+        <a class="nav-link collapsed" href="<?php echo base_url() ?>activitylog">
           <i class="bi bi-envelope"></i>
-          <span>Contact</span>
+          <span>Activity Logs</span>
         </a>
       </li><!-- End Contact Page Nav -->
 
